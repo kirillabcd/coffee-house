@@ -1,0 +1,22 @@
+.title-h2 {
+    @include h2;
+}
+.footer__title-h2 {
+    color: $text-light;
+}
+
+.favorite-coffee__title-h2 {
+    text-align: center;
+    color: $text-dark;
+}
+
+.accent-text {
+    @include accent-text;
+}
+
+.title-h3 {
+    @include h3;
+}
+.footer__title-h3 {
+    color: $text-light;
+}

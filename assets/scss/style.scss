@@ -1,0 +1,22 @@
+@import './style-components/_normalize';
+@import './style-components/_colors';
+@import './style-components/_typography';
+@import './style-components/_body';
+@import './style-components/animations';
+
+// TITLES
+@import './page-components/_title';
+
+// HEADER
+@import './layout/_header';
+@import './page-components/_nav-menu';
+
+// HERO
+@import './layout/hero';
+@import './page-components/button-primary';
+
+// FAVORITE COFFEE
+@import './layout/favorite-coffee';
+
+// FOOTER
+@import './layout/_footer';

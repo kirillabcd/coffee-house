@@ -1,0 +1,116 @@
+// FONTS
+@import url('https://fonts.cdnfonts.com/css/inter');
+$main-font: 'Inter', sans-serif;
+
+// H1
+$h1-size: 72px;
+$h1-weight: 600;
+$h1-lh: 105%;
+
+$h1-m-size: 42px;
+$h1-m-weight: 600;
+$h1-m-lh: 115%;
+
+// H2
+$h2-size: 60px;
+$h2-weight: 600;
+$h2-lh: 125%;
+
+$h2-m-size: 32px;
+$h2-m-weight: 600;
+$h2-m-lh: 125%;
+
+// H3
+$h3-size: 24px;
+$h3-weight: 600;
+$h3-lh: 125%;
+
+// MEDIUM
+$m-size: 16px;
+$m-weight: 400;
+$m-lh: 150%;
+
+// CAPTION
+$cap-size: 10px;
+$cap-weight: 600;
+$cap-lh: 140%;
+
+// LINK & BUTTON
+$click-size: 16px;
+$click-weight: 600;
+$click-lh: 150%;
+
+// BURGER LINK
+$burger-size: 32px;
+$burger-weight: 600;
+$burger-lh: 125%;
+
+@mixin h1 {
+    font-family: $main-font;
+    font-size: $h1-size;
+    font-weight: $h1-weight;
+    line-height: $h1-lh;
+    color: $text-light;
+}
+
+@mixin h1-m {
+    font-family: $main-font;
+    font-size: $h1-m-size;
+    font-weight: $h1-m-weight;
+    line-height: $h1-m-lh;
+    color: $text-light;
+}
+
+@mixin h2 {
+    font-family: $main-font;
+    font-size: $h2-size;
+    font-weight: $h2-weight;
+    line-height: $h2-lh;
+}
+
+@mixin h2-m {
+    font-family: $main-font;
+    font-size: $h2-m-size;
+    font-weight: $h2-m-weight;
+    line-height: $h2-m-lh;
+}
+
+@mixin h3 {
+    font-family: $main-font;
+    font-size: $h3-size;
+    font-weight: $h3-weight;
+    line-height: $h3-lh;
+}
+
+@mixin medium-text {
+    font-family: $main-font;
+    font-size: $m-size;
+    font-weight: $m-weight;
+    line-height: $m-lh;
+}
+
+@mixin caption-text {
+    font-family: $main-font;
+    font-size: $cap-size;
+    font-weight: $cap-weight;
+    line-height: $cap-lh;
+}
+
+@mixin clickable-els-text {
+    font-family: $main-font;
+    font-size: $click-size;
+    font-weight: $click-weight;
+    line-height: $click-lh;
+}
+
+@mixin burger-link-text {
+    font-family: $main-font;
+    font-size: $burger-size;
+    font-weight: $burger-weight;
+    line-height: $burger-lh;
+}
+
+@mixin accent-text {
+    font-style: italic;
+    color: $text-accent;
+}

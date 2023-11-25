@@ -1,0 +1,98 @@
+.favorite-coffee {
+    padding: 100px 0 0 0;
+}
+.slider {
+    padding: 40px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.slider__prev-button,
+.slider__next-button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid $border-dark;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.5s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+            > svg > path {
+                stroke: $border-light;
+            }
+        }
+    }
+}
+
+.slider__next-button > svg {
+    rotate: 180deg;
+}
+.slider__window {
+    max-width: 480px;
+    overflow: hidden;
+}
+.slider__slider-row {
+    display: flex;
+    gap: 20px;
+    transform: translateX(0);
+
+    transition: 0.7s ease;
+}
+.slider__image {
+    max-width: 480px;
+}
+.slider__slide-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+}
+.slider-info__item-name {
+    @include h3;
+    color: $text-dark;
+}
+.slider-info__item-description {
+    @include medium-text;
+    color: $text-dark;
+    text-align: center;
+}
+.slider-info__item-price {
+    @include h3;
+    color: $text-dark;
+}
+.slider__controls {
+    padding: 34px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider__control {
+    padding: 6px;
+    cursor: pointer;
+}
+
+.slider__decor {
+    position: relative;
+    display: inline-block;
+    height: 4px;
+    width: 40px;
+    background-color: $border-light;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.slider__decor-fill {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: $border-dark;
+    border-radius: 100px;
+}

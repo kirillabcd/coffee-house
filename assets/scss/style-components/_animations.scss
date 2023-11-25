@@ -1,0 +1,20 @@
+@keyframes icon-shaker {
+    0% {
+    }
+    15% {
+        rotate: 10deg;
+    }
+    35% {
+        rotate: -10deg;
+    }
+    50% {
+        transform: scale(1.1);
+        transform: translateY(10%);
+    }
+    75% {
+        transform: translateY(-10%);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
