@@ -10,6 +10,15 @@
     color: $text-dark;
 }
 
+.about__title-h2 {
+    color: $text-dark;
+    word-spacing: -1px;
+}
+
+.mobile-app__title-h2 {
+    color: $text-dark;
+}
+
 .accent-text {
     @include accent-text;
 }
