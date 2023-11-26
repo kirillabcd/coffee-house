@@ -1,5 +1,7 @@
 import { nextButton } from '../../components/nextButtonSlider.js'
 import { prevButton } from '../../components/PrevButtonSlider.js'
+import { controlsSlider } from '../../components/controlsSlider.js'
+import { sliderRow } from '../../components/sliderRow.js'
 
 // generated with GPT base on html markdown
 
@@ -62,8 +64,10 @@ export const favoriteSection = () => {
     sliderWindowDiv.classList.add('slider__window')
 
     // Create the slider row
-    const sliderRowDiv = document.createElement('div')
-    sliderRowDiv.classList.add('slider__slider-row')
+    // const sliderRowDiv = document.createElement('div')
+    // sliderRowDiv.classList.add('slider__slider-row')
+
+    const newSliderRow = sliderRow()
 
     // Create slides
     for (let i = 1; i <= 3; i++) {
@@ -121,33 +125,11 @@ export const favoriteSection = () => {
         slideDiv.appendChild(slideInfoDiv)
 
         // Append the slide div to the slider row
-        sliderRowDiv.appendChild(slideDiv)
+        newSliderRow.appendChild(slideDiv)
     }
 
     // Append the slider row to the slider window
-    sliderWindowDiv.appendChild(sliderRowDiv)
-
-    // Create the controls block
-    const controlsDiv = document.createElement('div')
-    controlsDiv.classList.add('slider__controls')
-
-    // Create control elements
-    for (let i = 0; i < 3; i++) {
-        const controlDiv = document.createElement('div')
-        controlDiv.classList.add('slider__control')
-
-        const decorSpan = document.createElement('span')
-        decorSpan.classList.add('slider__decor')
-
-        const decorFillDiv = document.createElement('div')
-        decorFillDiv.classList.add('slider__decor-fill')
-
-        decorSpan.appendChild(decorFillDiv)
-        controlDiv.appendChild(decorSpan)
-
-        // Append control element to the controls block
-        controlsDiv.appendChild(controlDiv)
-    }
+    sliderWindowDiv.appendChild(newSliderRow)
 
     // Create the "next" button
     const newNextButton = nextButton()
@@ -156,7 +138,7 @@ export const favoriteSection = () => {
 
     // Append all created elements to the DOM
     sliderBodyDiv.appendChild(sliderWindowDiv)
-    sliderBodyDiv.appendChild(controlsDiv)
+    sliderBodyDiv.appendChild(controlsSlider())
     sliderDiv.appendChild(newPrevButton)
     sliderDiv.appendChild(sliderBodyDiv)
     sliderDiv.appendChild(newNextButton)

@@ -80,7 +80,6 @@
 }
 
 .slider__decor {
-    position: relative;
     display: inline-block;
     height: 4px;
     width: 40px;
@@ -89,10 +88,6 @@
     overflow: hidden;
 }
 
-.slider__decor-fill {
-    position: absolute;
-    width: 50%;
-    height: 100%;
+.slider__decor--active {
     background-color: $border-dark;
-    border-radius: 100px;
 }
