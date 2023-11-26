@@ -2,6 +2,7 @@ export const aboutSection = () => {
     // Create the about section
     const aboutSection = document.createElement('section')
     aboutSection.classList.add('about')
+    aboutSection.id = 'about'
 
     // Create the container div
     const containerDiv = document.createElement('div')

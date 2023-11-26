@@ -1,5 +1,7 @@
+import { menuSection } from './sections/menu.js'
+
 export default () => {
-    const hello = document.createElement('div')
-    hello.textContent = 'hello from menu'
-    return hello
+    const page = document.createElement('div')
+    page.append(menuSection())
+    return page
 }

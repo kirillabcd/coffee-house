@@ -5,6 +5,7 @@ export const mobileAppSection = () => {
     // Create a new section
     const newSection = document.createElement('section')
     newSection.classList.add('mobile-app')
+    newSection.id = 'mobile-app'
 
     // Create a container
     const container = document.createElement('div')

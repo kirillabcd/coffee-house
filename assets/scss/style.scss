@@ -24,5 +24,10 @@
 // MOBILE-APP
 @import './layout/_mobile-app';
 
+// MENU
+@import './page-components/tabs';
+@import './layout/menu';
+@import './page-components/card';
+
 // FOOTER
 @import './layout/_footer';

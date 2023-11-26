@@ -1,5 +1,15 @@
+.title-h1 {
+    @include h1;
+}
+
+.menu__title-h1 {
+    text-align: center;
+    color: $text-dark;
+}
+
 .title-h2 {
     @include h2;
+    color: $text-dark;
 }
 .footer__title-h2 {
     color: $text-light;
@@ -7,16 +17,10 @@
 
 .favorite-coffee__title-h2 {
     text-align: center;
-    color: $text-dark;
 }
 
 .about__title-h2 {
-    color: $text-dark;
     word-spacing: -1px;
-}
-
-.mobile-app__title-h2 {
-    color: $text-dark;
 }
 
 .accent-text {

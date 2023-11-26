@@ -24,6 +24,8 @@
 .mobile-app__download-button {
     border-radius: 100px;
     cursor: pointer;
+
+    transition: 0.5s ease;
     @media (hover: hover) {
         &:hover {
             background-color: $container-color;

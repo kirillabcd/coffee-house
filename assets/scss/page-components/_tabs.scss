@@ -1,0 +1,50 @@
+.tabs {
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+}
+
+.tabs__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    border: 1px solid $border-dark;
+    border-radius: 100px;
+    @include clickable-els-text;
+
+    transition: 0.5s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+            color: $body-color;
+
+            > .button__decor {
+                background-color: $body-color;
+            }
+        }
+    }
+}
+
+.tabs__button--active {
+    background-color: $container-color;
+    color: $body-color;
+
+    > .button__decor {
+        background-color: $body-color;
+    }
+}
+
+.button__decor {
+    width: 30px;
+    height: 30px;
+    padding: 4px 6px 4px 6px;
+    margin-right: 8px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: $border-light;
+}

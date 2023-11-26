@@ -7,6 +7,7 @@ export const heroSection = () => {
     // Create a section HERO !!!
     const heroSection = document.createElement('section')
     heroSection.classList.add('hero')
+    heroSection.id = 'hero'
 
     // Create a container
     const containerDiv = document.createElement('div')

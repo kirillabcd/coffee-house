@@ -29,6 +29,7 @@ export const favoriteSection = () => {
     // Create the section
     const favoriteCoffeeSection = document.createElement('section')
     favoriteCoffeeSection.classList.add('favorite-coffee')
+    favoriteCoffeeSection.id = 'favorite'
 
     // Create the container
     const containerDiv = document.createElement('div')

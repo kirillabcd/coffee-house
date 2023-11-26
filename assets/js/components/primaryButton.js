@@ -1,9 +1,13 @@
 import { directRouter } from '../functions/vanillaRouter.js'
+import { buildCards } from '../functions/buildCards.js'
 
 export const primaryButton = () => {
     const button = createPrimaryButton()
 
-    button.addEventListener('click', () => directRouter('menu'))
+    button.addEventListener('click', () => {
+        directRouter('menu')
+        buildCards('coffee')
+    })
 
     return button
 }
