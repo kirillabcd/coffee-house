@@ -5,6 +5,11 @@
 .mobile-app__box {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .mobile-app__download {
     flex: 0 0 630px;

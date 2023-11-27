@@ -6,6 +6,10 @@
     padding: 40px 0 0 0;
     display: flex;
     gap: 40px;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
 }
 .image-board__left-side,
 .image-board__right-side {
@@ -59,5 +63,9 @@
         &:hover > img {
             transform: scale(0.92);
         }
+    }
+
+    @media screen and (max-width: 768px) {
+        display: none;
     }
 }

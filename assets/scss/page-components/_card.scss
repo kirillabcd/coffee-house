@@ -61,6 +61,11 @@
 }
 
 .loader-button {
+    position: relative;
+    margin: 40px;
+    bottom: 0px;
+    // left: 50%;
+    // transform: translateX(-50%);
     width: 60px;
     height: 60px;
     border: 1px solid $border-dark;

@@ -7,6 +7,7 @@ export const menuTabs = () => {
 
     const coffeeButton = secondaryButton('☕', 'Coffee', 'tabs__button tabs__button--coffee')
     coffeeButton.dataset.category = 'coffee'
+    coffeeButton.classList.add('tabs__button--active')
 
     const teaButton = secondaryButton('🫖', 'Tea', 'tabs__button tabs__button--tea')
     teaButton.dataset.category = 'tea'
