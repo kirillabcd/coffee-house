@@ -51,14 +51,43 @@ export const modal = async (dataname) => {
     modalHeader.append(infoTitle, infoDescr)
 
     // !!! CONTROLS
+
+    let basePrice = pick.price
+    console.log(basePrice)
+    let sizePrice = 0
+    let addPrice = 0
+    let totalPrice = 0
+
     const sizeControlsContainer = document.createElement('div')
     sizeControlsContainer.className = 'modal__buttons'
 
     Object.values(pick.sizes).forEach((sizeData, index) => {
         const sizes = ['S', 'M', 'L']
         const buttonText = `${sizeData.size}`
-        const button = secondaryButton(sizes[index], buttonText, 'modal__button')
+        const button = secondaryButton(
+            sizes[index],
+            buttonText,
+            'modal__button modal__button--size'
+        )
+
+        if (index === 0) {
+            button.classList.add('modal__button--active')
+        }
+
         button.dataset.dataprice = `$${sizeData['add-price']}`
+
+        button.addEventListener('click', () => {
+            document.querySelectorAll('.modal__button--size').forEach((otherButton) => {
+                otherButton.classList.remove('modal__button--active')
+            })
+            button.classList.add('modal__button--active')
+
+            sizePrice = +button.dataset.dataprice.slice(1)
+            totalPrice = (+basePrice + +sizePrice + +addPrice).toFixed(2)
+            console.log(totalPrice, sizePrice, addPrice)
+
+            priceValue.textContent = `$${totalPrice}`
+        })
 
         sizeControlsContainer.append(button)
     })
@@ -74,6 +103,21 @@ export const modal = async (dataname) => {
         const buttonText = `${addData.name}`
         const button = secondaryButton(index + 1, buttonText, 'modal__button')
         button.dataset.dataprice = `$${addData['add-price']}`
+
+        button.addEventListener('click', () => {
+            if (button.classList.contains('modal__button--active')) {
+                addPrice -= +button.dataset.dataprice.slice(1)
+            } else {
+                addPrice += +button.dataset.dataprice.slice(1)
+            }
+
+            button.classList.toggle('modal__button--active')
+
+            totalPrice = (+basePrice + +sizePrice + +addPrice).toFixed(2)
+            console.log(totalPrice, sizePrice, addPrice)
+
+            priceValue.textContent = `$${totalPrice}`
+        })
 
         addControlsContainer.append(button)
     })

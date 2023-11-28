@@ -117,10 +117,11 @@
 
 .modal__button--active {
     background-color: $container-color;
-    color: $body-color;
+    color: $text-light;
 
     > .button__decor {
         background-color: $body-color;
+        color: $text-dark;
     }
 }
 
