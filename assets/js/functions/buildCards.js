@@ -38,7 +38,7 @@ export function buildMoreCards() {
     }
 }
 
-async function getData() {
+export async function getData() {
     return fetch('./assets/data/products.json')
         .then((response) => response.json())
         .then((data) => {

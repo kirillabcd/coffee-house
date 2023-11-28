@@ -28,6 +28,7 @@
     @include h1;
     max-width: 530px;
     color: $text-light;
+    transform-origin: bottom;
 }
 
 .hero__description {

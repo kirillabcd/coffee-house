@@ -1,0 +1,174 @@
+.modal {
+    transform: (scale(1));
+    opacity: 1;
+
+    position: fixed;
+    background-color: $backdrop-color;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 10;
+    transition: scale 0s ease, opacity 0.3s ease;
+}
+.modal-window {
+    background-color: $body-color;
+    padding: 16px 16px 16px 16px;
+    border-radius: 40px;
+    display: flex;
+    gap: 20px;
+    align-items: start;
+}
+.modal__img-box {
+    width: 310px;
+    aspect-ratio: 1;
+    border-radius: 40px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (hover: hover) {
+        &:hover .modal__img {
+            transform: scale(0.92);
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
+.modal__img {
+    max-width: 340px;
+    aspect-ratio: 1;
+
+    transition: 0.5s ease;
+}
+.modal__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+
+    max-width: 438px;
+
+    @media screen and (max-width: 880px) {
+        max-width: 326px;
+    }
+
+    @media screen and (max-width: 425px) {
+        max-width: 310px;
+    }
+}
+
+.modal__header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.info__title {
+    @include h3;
+}
+.info__descr {
+    @include medium-text;
+}
+.modal__controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.controls__title {
+    @include medium-text;
+}
+.modal__buttons {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.modal__button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px 8px 8px;
+    border: 1px solid $border-dark;
+    border-radius: 100px;
+    @include clickable-els-text;
+    color: $text-dark;
+
+    transition: 0.5s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+            color: $text-light;
+
+            > .button__decor {
+                background-color: $body-color;
+                color: $text-dark;
+            }
+        }
+    }
+}
+
+.modal__button--active {
+    background-color: $container-color;
+    color: $body-color;
+
+    > .button__decor {
+        background-color: $body-color;
+    }
+}
+
+.button__decor {
+    width: 30px;
+    height: 30px;
+    padding: 4px 6px 4px 6px;
+    margin-right: 8px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: $border-light;
+}
+
+.modal__price {
+    display: flex;
+    justify-content: space-between;
+}
+.price__title {
+    @include h3;
+}
+.price__value {
+    @include h3;
+}
+.modal__disclaimer {
+    border-top: 1px solid $border-light;
+    padding: 12px 0 12px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+.disclaimer__text {
+    @include caption-text;
+}
+.modal__close-button {
+    width: 100%;
+    border-radius: 100px;
+    border: 1px solid $border-dark;
+    padding: 10px 10px 10px 10px;
+
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    @include clickable-els-text;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+            color: $body-color;
+        }
+    }
+}

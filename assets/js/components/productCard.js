@@ -1,7 +1,16 @@
+import { modal } from './modal.js'
+
 export const productCard = (item) => {
     const menuItem = document.createElement('div')
     menuItem.className = 'menu-item'
     menuItem.dataset.dataname = `${item.name}`
+
+    menuItem.addEventListener('click', async () => {
+        const dataName = menuItem.dataset.dataname
+        const newModal = await modal(dataName)
+        newModal.dataset.dataname = `${dataName}`
+        document.body.prepend(newModal)
+    })
 
     const menuItemBody = document.createElement('div')
     menuItemBody.className = 'menu-item__body'
