@@ -27,12 +27,12 @@ export const heroSection = () => {
 
     // Create a poster for the video
     const videoPoster = document.createElement('img')
-    videoPoster.src = '/assets/img/other/img-hero.jpg'
+    videoPoster.src = 'assets/img/other/img-hero.jpg'
     videoPoster.alt = 'Hero Image Poster'
 
     // Create a source element for the video
     const videoSource = document.createElement('source')
-    videoSource.src = './assets/video/video.mp4'
+    videoSource.src = 'assets/video/video.mp4'
     videoSource.type = 'video/mp4'
 
     // Add the poster and source to the video element
