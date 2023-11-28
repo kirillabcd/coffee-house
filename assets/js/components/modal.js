@@ -169,6 +169,12 @@ export const modal = async (dataname) => {
         modalContainer.remove()
     })
 
+    modalContainer.addEventListener('click', (event) => {
+        if (event.target === modalContainer) {
+            modalContainer.remove()
+        }
+    })
+
     // Append elements to the DOM
     modalInfo.append(
         modalHeader,
