@@ -4,8 +4,8 @@ import menu from '../pages/menu.js'
 const app = document.querySelector('.main')
 
 const routes = {
-    '/': { render: mainPage },
-    '/menu': { render: menu },
+    '/coffee-house': { render: mainPage },
+    '/coffee-house/menu': { render: menu },
 }
 
 export function router() {
