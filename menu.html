@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./assets/css/style.min.css" />
+        <title>Coffee House</title>
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__container">
+                <a href="index.html">
+                    <img src="./assets/img/other/logo.png" alt="" class="logo" />
+                </a>
+
+                <nav class="header__navigation">
+                    <ul class="header__menu-items">
+                        <li class="header__container">
+                            <a href="index.html#favorite" class="header__menu-link"
+                                >Favorite coffee</a
+                            >
+                        </li>
+
+                        <li class="header__menu-item">
+                            <a href="index.html#about" class="header__menu-link">About</a>
+                        </li>
+
+                        <li class="header__menu-item">
+                            <a href="index.html#mobile-app" class="header__menu-link">Mobile app</a>
+                        </li>
+
+                        <li class="header__menu-item">
+                            <a href="#contacts" class="header__menu-link">Contact us</a>
+                        </li>
+                    </ul>
+
+                    <form action="menu.html">
+                        <button class="menu-button menu-button--active">
+                            Menu
+                            <span class="menu-button__icon-cup"></span>
+                        </button>
+                    </form>
+                </nav>
+                <button class="header__burger-button">
+                    <span class="header__burger-line"></span>
+                    <span class="header__burger-line"></span>
+                </button>
+            </div>
+        </header>
+
+        <main class="main">
+            <div class="modal">
+                <div class="modal-window">
+                    <div class="modal__img-box">
+                        <img src="./assets/img/coffee/coffee-1.png" alt="" class="modal__img" />
+                    </div>
+                    <div class="modal__info">
+                        <div class="modal__header">
+                            <div class="info__title">###</div>
+                            <div class="info__descr">###</div>
+                        </div>
+
+                        <div class="modal__controls">
+                            <div class="controls__title">Size</div>
+                            <div class="modal__buttons">
+                                <button
+                                    class="secondary-button secondary-button--active size-button size-button--active"
+                                >
+                                    <div class="secondary-button__icon">S</div>
+                                    <div class="secondary-button__text size-button__text">###</div>
+                                </button>
+                                <button class="secondary-button size-button">
+                                    <div class="secondary-button__icon">M</div>
+                                    <div class="secondary-button__text size-button__text">###</div>
+                                </button>
+                                <button class="secondary-button size-button">
+                                    <div class="secondary-button__icon">L</div>
+                                    <div class="secondary-button__text size-button__text">###</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal__controls">
+                            <div class="controls__title">Additives</div>
+                            <div class="modal__buttons">
+                                <button class="secondary-button add-button">
+                                    <div class="secondary-button__icon">1</div>
+                                    <div class="secondary-button__text add-button__text">###</div>
+                                </button>
+                                <button class="secondary-button add-button">
+                                    <div class="secondary-button__icon">2</div>
+                                    <div class="secondary-button__text add-button__text">###</div>
+                                </button>
+                                <button class="secondary-button add-button">
+                                    <div class="secondary-button__icon">3</div>
+                                    <div class="secondary-button__text add-button__text">###</div>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="modal__price">
+                            <div class="price__title">Total:</div>
+                            <div class="price__value">$###</div>
+                        </div>
+
+                        <div class="modal__disclaimer">
+                            <img
+                                src="./assets/img/icons/info-empty.svg"
+                                alt=""
+                                class="disclaimer__icon"
+                            />
+                            <div class="disclaimer__text">
+                                The cost is not final. Download our mobile app to see the final
+                                price and place your order. Earn loyalty points and enjoy your
+                                favorite coffee with up to 20% discount.
+                            </div>
+                        </div>
+
+                        <button class="modal__close-button">Close</button>
+                    </div>
+                </div>
+            </div>
+
+            <section class="menu">
+                <div class="container">
+                    <div class="menu-wrapper">
+                        <h1 class="h1-title menu__h1-title">
+                            Behind each of our cups hides an
+                            <span class="accent-text">amazing surprise</span>
+                        </h1>
+
+                        <div class="menu__controls">
+                            <button
+                                class="secondary-button secondary-button--active menu-control"
+                                data-category="coffee"
+                            >
+                                <div class="secondary-button__icon menu-control">☕</div>
+                                <div class="secondary-button__text">Coffee</div>
+                            </button>
+
+                            <button class="secondary-button menu-control" data-category="tea">
+                                <div class="secondary-button__icon">🫖</div>
+                                <div class="secondary-button__text">Tea</div>
+                            </button>
+
+                            <button class="secondary-button menu-control" data-category="dessert">
+                                <div class="secondary-button__icon">🍰</div>
+                                <div class="secondary-button__text">Dessert</div>
+                            </button>
+                        </div>
+
+                        <ul class="menu__menu-items"></ul>
+                        <div class="button-wrapper">
+                            <button class="loader-button">
+                                <svg class="loader-button-svg">
+                                    <use
+                                        xlink:href="./assets/img/icons/loader-button.svg#loader-button"
+                                    ></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer" id="contacts">
+            <div class="container footer__container">
+                <div class="footer__wrapper">
+                    <div class="footer__column">
+                        <h2 class="h2-title footer__h2-title">
+                            Sip, Savor, Smile. <span class="accent-text">It's coffee time!</span>
+                        </h2>
+
+                        <div class="footer__socials-icons">
+                            <a
+                                class="footer__social-link"
+                                href="https://www.facebook.com/"
+                                target="_blank"
+                            >
+                                <svg class="footer__socials-icon">
+                                    <use
+                                        xlink:href="./assets/img/socials/socials-sprite.svg#facebook"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="footer__social-link"
+                                href="https://instagram.com/"
+                                target="_blank"
+                            >
+                                <svg class="footer__socials-icon">
+                                    <use
+                                        xlink:href="./assets/img/socials/socials-sprite.svg#instagram"
+                                    ></use>
+                                </svg>
+                            </a>
+                            <a
+                                class="footer__social-link"
+                                href="https://twitter.com/"
+                                target="_blank"
+                            >
+                                <svg class="footer__socials-icon">
+                                    <use
+                                        xlink:href="./assets/img/socials/socials-sprite.svg#twitter"
+                                    ></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <h3 class="h3-title footer__h3-title">Contact us</h3>
+
+                        <ul class="footer__contacts-items">
+                            <li class="footer__contacts-item">
+                                <a
+                                    class="footer__contacts-link"
+                                    href="https://maps.app.goo.gl/yc9AyPB77Hny9kF78"
+                                    target="_blank"
+                                >
+                                    <span
+                                        class="footer__contacts-icon footer__contacts-icon--pin"
+                                    ></span>
+                                    8558 Green Rd., LA
+                                </a>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <a class="footer__contacts-link" href="tel:+1 (603) 555-0123">
+                                    <span
+                                        class="footer__contacts-icon footer__contacts-icon--phone"
+                                    ></span>
+                                    +1 (603) 555-0123
+                                </a>
+                            </li>
+
+                            <li class="footer__contacts-item">
+                                <span
+                                    class="footer__contacts-icon footer__contacts-icon--clock"
+                                ></span
+                                >Mon-Sat: 9:00 – 23:00
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="./assets/js/menu.js" type="module"></script>
+    </body>
+</html>

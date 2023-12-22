@@ -1,0 +1,95 @@
+.primary-button {
+    padding: 20px 80px 20px 80px;
+    background-color: $body-color;
+    border-radius: 100px;
+    @extend %clickable-els-text;
+    @extend %dark-color;
+
+    display: flex;
+    gap: 6px;
+
+    > .primary-button__text {
+        display: inline-block;
+        transform: translateX(13px);
+
+        transition: 0.7s ease;
+    }
+
+    > .primary-button__icon {
+        display: inline-block;
+        background-image: url(../img/icons/coffee-cup.svg);
+        width: 20px;
+        height: 20px;
+        vertical-align: sub;
+
+        transform: scale(0);
+        transition: 0.7s ease;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            > .primary-button__text {
+                transform: translateX(0);
+            }
+            > .primary-button__icon {
+                transform: scale(1);
+                animation: icon-shaker 1s ease;
+                animation-delay: 0.5s;
+            }
+        }
+    }
+}
+
+.secondary-button {
+    padding: 8px 16px 8px 8px;
+    border-radius: 100px;
+    border: 1px solid $border-light;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    transition: 0.7s ease;
+
+    .secondary-button__icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $border-light;
+        border-radius: 50%;
+
+        font-size: 16px;
+
+        transition: 0.7s ease;
+    }
+    .secondary-button__text {
+        @extend %clickable-els-text;
+        @extend %dark-color;
+
+        transition: 0.7s ease;
+    }
+
+    &.secondary-button--active {
+        background-color: $container-color;
+
+        .secondary-button__icon {
+            background-color: $body-color;
+        }
+        .secondary-button__text {
+            @extend %light-color;
+        }
+    }
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+
+            .secondary-button__icon {
+                background-color: $body-color;
+            }
+            .secondary-button__text {
+                color: $text-light;
+            }
+        }
+    }
+}

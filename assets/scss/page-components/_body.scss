@@ -1,0 +1,23 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: 'Inter', Verdana, Tahoma, sans-serif;
+    background-color: $body-color;
+
+    &.lock-scroll {
+        overflow-y: hidden;
+    }
+}
+
+.container {
+    width: clamp(320px, 100vw, 1440px);
+    padding: 0 40px 0 40px;
+}

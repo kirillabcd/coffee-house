@@ -1,0 +1,47 @@
+.mobile-app {
+    padding: $sections-padd 0 0 0;
+}
+.mobile-app__wrapper {
+    display: flex;
+    gap: 100px;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
+}
+.mobile-app__column {
+    flex: 2;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+}
+.mobile-app__h2-title {
+    @extend %dark-color;
+}
+.accent-text {
+}
+.mobile-app__description {
+    @extend %medium-text;
+}
+.mobile-app__buttons {
+    display: flex;
+    gap: 20px;
+}
+.mobile-app__button {
+    transition: 0.5s ease;
+    @media (hover: hover) {
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.mobile-app__svg {
+    width: 200px;
+    height: 64px;
+}
+.mobile-app__image {
+    width: clamp(320px, 100%, 630px);
+}

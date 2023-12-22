@@ -45,7 +45,7 @@ $burger-size: 32px;
 $burger-weight: 600;
 $burger-lh: 125%;
 
-@mixin h1 {
+%h1 {
     font-family: $main-font;
     font-size: $h1-size;
     font-weight: $h1-weight;
@@ -53,7 +53,7 @@ $burger-lh: 125%;
     color: $text-light;
 }
 
-@mixin h1-m {
+%h1-m {
     font-family: $main-font;
     font-size: $h1-m-size;
     font-weight: $h1-m-weight;
@@ -61,56 +61,64 @@ $burger-lh: 125%;
     color: $text-light;
 }
 
-@mixin h2 {
+%h2 {
     font-family: $main-font;
     font-size: $h2-size;
     font-weight: $h2-weight;
     line-height: $h2-lh;
 }
 
-@mixin h2-m {
+%h2-m {
     font-family: $main-font;
     font-size: $h2-m-size;
     font-weight: $h2-m-weight;
     line-height: $h2-m-lh;
 }
 
-@mixin h3 {
+%h3 {
     font-family: $main-font;
     font-size: $h3-size;
     font-weight: $h3-weight;
     line-height: $h3-lh;
 }
 
-@mixin medium-text {
+%medium-text {
     font-family: $main-font;
     font-size: $m-size;
     font-weight: $m-weight;
     line-height: $m-lh;
 }
 
-@mixin caption-text {
+%caption-text {
     font-family: $main-font;
     font-size: $cap-size;
     font-weight: $cap-weight;
     line-height: $cap-lh;
 }
 
-@mixin clickable-els-text {
+%clickable-els-text {
     font-family: $main-font;
     font-size: $click-size;
     font-weight: $click-weight;
     line-height: $click-lh;
 }
 
-@mixin burger-link-text {
+%burger-link-text {
     font-family: $main-font;
     font-size: $burger-size;
     font-weight: $burger-weight;
     line-height: $burger-lh;
 }
 
-@mixin accent-text {
+%accent-text {
     font-style: italic;
     color: $text-accent;
+}
+
+%light-color {
+    color: $text-light;
+}
+
+%dark-color {
+    color: $text-dark;
 }

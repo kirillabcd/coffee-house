@@ -1,0 +1,134 @@
+.footer {
+    padding: $sections-padd 0 40px 0;
+}
+.footer__wrapper {
+    padding: 100px 100px 100px 100px;
+    display: flex;
+    gap: 40px;
+
+    background-color: $container-color;
+    border-radius: $border-rad;
+
+    @media (max-width: $tablet-width) {
+        flex-direction: column;
+        gap: 100px;
+    }
+}
+.footer__column {
+    flex: 530px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $tablet-width) {
+        flex: auto;
+    }
+}
+
+.footer__column:nth-child(1) {
+    gap: 100px;
+}
+.footer__h2-title {
+    @extend %light-color;
+}
+.footer__social-link {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $border-light;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    transition: 0.5s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $body-color;
+            > .footer__socials-icon {
+                stroke: $border-dark;
+                animation: icon-shaker 1s ease;
+            }
+        }
+    }
+}
+
+.footer__socials-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.footer__socials-icon {
+    width: 24px;
+    height: 24px;
+    stroke: $border-light;
+
+    transition: 0.5s ease;
+}
+
+.footer__column:nth-child(2) {
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer__h3-title {
+    @extend %light-color;
+}
+
+.footer__contacts-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer__contacts-item {
+    @extend %light-color;
+    display: flex;
+    gap: 8px;
+}
+
+.footer__contacts-link {
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 100%;
+        height: 2px;
+        background-color: $border-light;
+
+        transform: scale(0);
+        transition: 0.5s ease;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            &:after {
+                transform: scale(1);
+            }
+            > .footer__contacts-icon {
+                animation: icon-shaker 1s ease;
+            }
+        }
+    }
+}
+
+.footer__contacts-icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+}
+
+.footer__contacts-icon--pin {
+    background-image: url(../img/contacts/pin-alt.svg);
+}
+.footer__contacts-icon--phone {
+    background-image: url(../img/contacts/phone.svg);
+}
+.footer__contacts-icon--clock {
+    background-image: url(../img/contacts/clock.svg);
+}

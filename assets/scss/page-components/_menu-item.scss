@@ -1,0 +1,115 @@
+.menu-item__body {
+    border-radius: 40px;
+    border: 1px solid $border-light;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+
+    cursor: pointer;
+
+    @media (hover: hover) {
+        &:hover .menu-item__img {
+            transform: scale(0.92);
+        }
+    }
+}
+.menu-item__img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 40px;
+    overflow: hidden;
+
+    max-width: 308px;
+    aspect-ratio: 1;
+}
+.menu-item__img {
+    width: 340px;
+    aspect-ratio: 1;
+    background-color: $body-color;
+
+    transition: 0.5s ease;
+}
+.menu-item__info-container {
+    padding: 20px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-between;
+    min-height: 196px;
+}
+
+.menu-item__info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.menu-item__title {
+    @extend %h3;
+    @extend %dark-color;
+}
+.menu-item__description {
+    @extend %medium-text;
+    @extend %dark-color;
+}
+.menu-item__price {
+    @extend %h3;
+    @extend %dark-color;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loader-button {
+    display: none;
+
+    position: relative;
+    margin: 40px;
+    bottom: 0px;
+    width: 60px;
+    height: 60px;
+    border: 1px solid $border-dark;
+    border-radius: 100%;
+
+    &.loader-button--visible {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    transition: 0.3s ease;
+    cursor: pointer;
+
+    .loader-button-svg {
+        width: 24px;
+        height: 24px;
+        stroke: $container-color;
+        transition: 1s ease;
+    }
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+
+            & > .loader-button-svg {
+                stroke: $body-color;
+                transform: rotate(360deg);
+            }
+        }
+    }
+
+    &:active {
+        background-color: $container-color;
+
+        & > .loader-button-svg {
+            stroke: $body-color;
+            transform: rotate(360deg);
+        }
+    }
+}

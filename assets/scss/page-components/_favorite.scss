@@ -1,0 +1,133 @@
+.favorite {
+    padding: 100px 0 0 0;
+}
+.favorite__h2-title {
+    @extend %dark-color;
+    text-align: center;
+}
+
+.slider__button {
+    width: 60px;
+    height: 60px;
+    border: 1px solid $border-dark;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: 0.5s ease;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: $container-color;
+            > .slider__arrow {
+                stroke: $body-color;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
+    &.slider__button--disabled {
+        pointer-events: none;
+        cursor: auto;
+
+        @media (hover: hover) {
+            &:hover {
+                background-color: $body-color;
+                > .slider__arrow {
+                    stroke: $border-dark;
+                }
+            }
+        }
+    }
+}
+.slider__button--prev-button {
+}
+
+.slider__button--next-button {
+    transform: rotate(180deg);
+}
+
+.slider__arrow {
+    stroke: $container-color;
+    width: 24px;
+    height: 24px;
+
+    transition: 0.5s ease;
+}
+
+.slider {
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
+}
+
+.slider__window {
+    width: 530px;
+    overflow: hidden;
+
+    @media screen and (max-width: 768px) {
+        width: 480px;
+    }
+}
+.slider__row {
+    display: flex;
+    gap: 40px;
+
+    transition: 0.5s ease;
+}
+.slider__slide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @media screen and (max-width: 768px) {
+        width: 480px;
+    }
+}
+
+.slider__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+    @extend %dark-color;
+}
+.slider__description {
+    text-align: center;
+}
+
+.slider__controls {
+    padding: 40px 0 0 0;
+    display: flex;
+    justify-content: center;
+}
+.slider__control {
+    padding: 6px 6px 6px 6px;
+    cursor: pointer;
+
+    &.slider__control--active {
+        > .slider__control-decor {
+            width: 40px;
+            background-color: $border-dark;
+        }
+    }
+}
+.slider__control-decor {
+    width: 12px;
+    height: 12px;
+    background-color: $border-light;
+    border-radius: 100px;
+
+    transition: 1s ease;
+}

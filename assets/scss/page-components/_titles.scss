@@ -1,0 +1,14 @@
+.h1-title {
+    @extend %h1;
+}
+
+.h2-title {
+    @extend %h2;
+}
+
+.h3-title {
+    @extend %h3;
+}
+.accent-text {
+    @extend %accent-text;
+}

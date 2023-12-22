@@ -1,0 +1,29 @@
+.menu__h1-title {
+    text-align: center;
+    @extend %dark-color;
+}
+
+.menu__controls {
+    padding: 40px 0 0 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.menu__menu-items {
+    padding: 40px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 310px);
+    grid-auto-rows: 1fr;
+    justify-content: center;
+    gap: 40px;
+
+    min-height: 600px;
+    opacity: 1;
+    transition: 0.4s ease;
+
+    &.menu__menu-items--hidden {
+        opacity: 0;
+    }
+}

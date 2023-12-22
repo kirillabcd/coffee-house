@@ -1,37 +1,36 @@
-@import './style-components/_normalize';
-@import './style-components/_colors';
-@import './style-components/_typography';
-@import './style-components/_body';
+// COMMON STYLE COMPONENTS
+@import './style-components/normalize';
+@import './style-components/colors';
+@import './style-components/varaibles';
+@import './style-components/typography';
 @import './style-components/animations';
+@import './style-components/breakpoints';
 
-// TITLES
-@import './page-components/_title';
+// BODY & CONTAINER
+@import './page-components/body';
+// TITLES, BUTTONS etc.
+@import './page-components/titles';
+@import './page-components/buttons';
 
 // HEADER
-@import './layout/_header';
-@import './page-components/_nav-menu';
-@import './page-components/burger-button';
+@import './page-components/header';
 
 // HERO
-@import './layout/hero';
-@import './page-components/button-primary';
-
-// FAVORITE COFFEE
-@import './layout/favorite-coffee';
-
+@import './page-components/hero';
+// FAVORITE
+@import './page-components/favorite';
 // ABOUT
-@import './layout/_about';
-
-// MOBILE-APP
-@import './layout/_mobile-app';
+@import './page-components/about';
+// MOBILE APP
+@import './page-components/mobile-app';
+// FOOTER
+@import './page-components/footer';
 
 // MENU
-@import './page-components/tabs';
-@import './layout/menu';
-@import './page-components/card';
+@import './page-components/menu';
+
+// MENU ITEM
+@import './page-components/menu-item';
 
 // MODAL
-@import './page-components/_modal';
-
-// FOOTER
-@import './layout/_footer';
+@import './page-components/modal';

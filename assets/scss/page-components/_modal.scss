@@ -1,18 +1,26 @@
 .modal {
-    transform: (scale(1));
-    opacity: 1;
+    transform: (scale(0));
+    opacity: 0;
 
     position: fixed;
     background-color: $backdrop-color;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
 
     display: flex;
     justify-content: center;
     align-items: center;
 
     z-index: 10;
-    transition: scale 0s ease, opacity 0.3s ease;
+    transition: scale 0.5s ease, opacity 0.5s ease;
+
+    &.modal--visible {
+        transform: scale(1);
+        opacity: 1;
+        transition: scale 0.5s ease, opacity 0.5s ease;
+    }
 }
 .modal-window {
     background-color: $body-color;
@@ -71,68 +79,25 @@
     gap: 12px;
 }
 .info__title {
-    @include h3;
+    @extend %h3;
 }
 .info__descr {
-    @include medium-text;
+    @extend %medium-text;
 }
 .modal__controls {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
-.controls__title {
-    @include medium-text;
-}
+
 .modal__buttons {
     display: flex;
     gap: 8px;
     flex-wrap: wrap;
 }
 
-.modal__button {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 16px 8px 8px;
-    border: 1px solid $border-dark;
-    border-radius: 100px;
-    @include clickable-els-text;
-    color: $text-dark;
-
-    transition: 0.5s ease;
-
-    @media (hover: hover) {
-        &:hover {
-            background-color: $container-color;
-            color: $text-light;
-
-            > .button__decor {
-                background-color: $body-color;
-                color: $text-dark;
-            }
-        }
-    }
-}
-
-.modal__button--active {
-    background-color: $container-color;
-    color: $text-light;
-
-    > .button__decor {
-        background-color: $body-color;
-        color: $text-dark;
-    }
-}
-
-.button__decor {
-    width: 30px;
-    height: 30px;
-    padding: 4px 6px 4px 6px;
-    margin-right: 8px;
-    border-radius: 50%;
-    text-align: center;
-    background-color: $border-light;
+.controls__title {
+    @extend %medium-text;
 }
 
 .modal__price {
@@ -140,10 +105,10 @@
     justify-content: space-between;
 }
 .price__title {
-    @include h3;
+    @extend %h3;
 }
 .price__value {
-    @include h3;
+    @extend %h3;
 }
 .modal__disclaimer {
     border-top: 1px solid $border-light;
@@ -153,7 +118,7 @@
     gap: 8px;
 }
 .disclaimer__text {
-    @include caption-text;
+    @extend %caption-text;
 }
 .modal__close-button {
     width: 100%;
@@ -164,7 +129,7 @@
     transition: 0.3s ease;
     cursor: pointer;
 
-    @include clickable-els-text;
+    @extend %clickable-els-text;
 
     @media (hover: hover) {
         &:hover {
